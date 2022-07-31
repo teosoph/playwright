@@ -57,4 +57,4 @@ test("Checking the sign up possibility with the valid data", async ({
   //   );
 });
 
-// export default userData;
+export default userData;
