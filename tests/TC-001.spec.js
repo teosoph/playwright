@@ -3,13 +3,13 @@ const { test, expect } = require("@playwright/test");
 test("Checking the header menu visibility on the test site ", async ({
   page,
 }) => {
+  // go to the test site
   const testSiteUrl = "https://www.redmine.org";
-  const mainMenuSelector = '[id="main-menu"]';
-  // const mainMenuSelector = '[id="footer"]';
-
   await page.goto(testSiteUrl);
 
   //isDisplayed
+  const mainMenuSelector = '[id="main-menu"]';
+  // const mainMenuSelector = '[id="footer"]';
   await expect(page.locator(mainMenuSelector)).toBeVisible();
 
   //isDisplayedInViewport
